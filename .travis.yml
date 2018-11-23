@@ -8,12 +8,12 @@ install:
   - pip install --upgrade setuptools
   - pip install pytest pytest-cov
   - pip install coveralls
-  
+
 script:
   - python test_palindromes.py 
   - pylint palindromes.py
   - pycodestyle --cov=.
   - coverage report
- 
+
 after_success:
 coveralls
