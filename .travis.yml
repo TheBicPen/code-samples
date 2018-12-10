@@ -5,16 +5,9 @@ python:
   - "2.7.14"
 # command to install dependencies
 install:
-  - pip install --upgrade setuptools
-  - pip install -r requirements.txt
-  - pip install pytest pytest-cov
-  - pip install coveralls
+  - pip install pylint
 
 script:
   - python test_palindromes.py 
   - pylint palindromes.py
-  - pycodestyle --cov=.
-  - coverage report
 
-after_success:
-  coveralls
